@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "../index.css";
 import image1 from "../images/Amazon-Logo-White.png";
 import flag from "../images/india-flag.png";
@@ -7,18 +7,25 @@ import { CiSearch } from "react-icons/ci";
 import { FaCaretDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FaCartArrowDown } from "react-icons/fa";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { searchinput } from "../redux/ActionCreator";
 const Navbar = () => {
+  const dispatch = useDispatch();
+  // const inputData = useSelector((state) => state);
+  // console.log(inputData);
   const quantity = useSelector((state) => state);
+
   const [focus, setFocus] = useState("false");
   const [focus1, setFocus1] = useState("false");
   const [val, setVal] = useState("EN");
+
   // const [quant,setQunant] = useState(0) // dont use when item quantity is increased or decrease from other components
   let dataArr = quantity.Product_data.cartData;
+
   let total = dataArr.reduce((acc, ele) => {
     return acc + ele.quan;
   }, 0);
-  console.log(total);
+
   // for handing the focus
   const inputHandel = () => {
     setFocus1(true);
@@ -116,6 +123,7 @@ const Navbar = () => {
                 placeholder="Search Amazon.in"
                 style={{ outline: "none" }}
                 onClick={inputHandel}
+                onChange={(e) => dispatch(searchinput(e.target.value))}
               />
             </div>
 
@@ -157,7 +165,6 @@ const Navbar = () => {
             }}
             onClick={optionHandel}
           >
-            {/* <div className="d-flex justify-content-center"> */}
             <div className="d-flex w-75 justify-content-between px-1 my-2">
               <div
                 className="optionDiv mt-1"
@@ -176,13 +183,11 @@ const Navbar = () => {
               </div>
               <label>English-EN</label>
             </div>
-            {/* </div> */}
 
             <div className="d-flex justify-content-center">
               <hr className="w-75" />
             </div>
 
-            {/* <div className="d-flex justify-content-center"> */}
             <div className="d-flex w-75 px-1 justify-content-between my-2">
               <div
                 className="optionDiv mt-1"
@@ -201,9 +206,7 @@ const Navbar = () => {
               </div>
               <label>Hindi-HI</label>
             </div>
-            {/* </div> */}
 
-            {/* <div className="d-flex justify-content-center"> */}
             <div className="d-flex w-75 justify-content-between px-1 my-2">
               <div
                 className="optionDiv mt-1"
@@ -222,9 +225,7 @@ const Navbar = () => {
               </div>
               <label for="TA">Telugu-TA</label>
             </div>
-            {/* </div> */}
 
-            {/* <div className="d-flex justify-content-center"> */}
             <div className="d-flex w-75 justify-content-between px-1 my-2">
               <div
                 className="optionDiv mt-1"
@@ -243,9 +244,7 @@ const Navbar = () => {
               </div>
               <label>Telangana-TE</label>
             </div>
-            {/* </div> */}
 
-            {/* <div className="d-flex justify-content-center"> */}
             <div className="d-flex w-75 justify-content-between px-1 my-2">
               <div
                 className="optionDiv mt-1"
@@ -264,7 +263,6 @@ const Navbar = () => {
               </div>
               <label>Karnataka-KA</label>
             </div>
-            {/* </div> */}
           </div>
         </div>
 

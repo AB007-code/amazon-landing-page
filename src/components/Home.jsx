@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import pic1 from "../images/crousel-photo1.jpg";
 import pic2 from "../images/crousel-photo2.jpg";
 import pic3 from "../images/crousel-photo3.jpg";
@@ -36,7 +36,12 @@ import cloth13 from "../images/cloth13.jpg";
 import promo from "../images/9742750.jpg";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
+import { useDispatch, useSelector } from "react-redux";
+import data from "../MOCK_Data.json";
+import { addtocart } from "../redux/ActionCreator";
 const Home = () => {
+  // const [dataArr, setDataArr] = useState([]);
+  const dispatch = useDispatch();
   let clothArr = [
     cloth1,
     cloth2,
@@ -53,6 +58,19 @@ const Home = () => {
     cloth13,
   ];
 
+  const inputdata = useSelector((state) => state);
+  let inputDataArr = inputdata.Product_data.inputData;
+  let value = inputDataArr[inputDataArr.length - 1];
+  // useEffect(() => {
+  let dataArr;
+  data.filter((ele) => {
+    if (ele[0].category == value) {
+      dataArr = ele[1].data;
+    }
+  });
+  // }, []);
+
+  console.log(dataArr);
   return (
     <>
       <div
@@ -108,165 +126,200 @@ const Home = () => {
         style={{
           bottom: "300px",
           backgroundColor: "transparent",
-          // backgroundColor: "#E3E6E6",
           height: "500px",
         }}
       >
-        <div className="row row-cols-4 g-4">
-          <div>
-            <div className="border bg-light p-3" style={{ height: "430px" }}>
-              <h5 className="fw-bold px-2">
-                Appliances for your home | Up to 55% off
-              </h5>
+        {dataArr ? (
+          <div className="row row-cols-4 g-4">
+            {dataArr.map((ele) => (
               <div>
-                <div className="d-flex p-2">
-                  <div>
-                    <Link to="/product/1">
-                      <img src={ac} className="image" id="1" />
-                    </Link>
-                    <p className="p">Air conditioners</p>
+                <div
+                  className="border bg-light p-3 d-flex flex-column justify-content-around"
+                  style={{ height: "430px" }}
+                >
+                  <div
+                    className="border"
+                    style={{ height: "200px", width: "100%" }}
+                  >
+                    <img
+                      src={ele.image}
+                      className="h-100 w-100 object-fit-cover"
+                    />
                   </div>
-                  <div className="ps-3">
-                    <Link to="/product/2">
-                      <img src={fridge} className="image" id="2" />
-                    </Link>
-                    <p className="p">Refrigerators</p>
-                  </div>
-                </div>
-                <div className="d-flex p-2">
-                  <div>
-                    <Link to="/product/3">
-                      <img src={oven} className="image" id="3" />
-                    </Link>
-                    <p className="p">Microwaves</p>
-                  </div>
-                  <div className="ps-3">
-                    <Link to="/product/4">
-                      <img src={washing} className="image" id="4" />
-                    </Link>
-                    <p className="p">Washing Machines</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div>
-            <div className="border bg-light p-3" style={{ height: "430px" }}>
-              <h5 className="fw-bold px-2">
-                PlayStation 5 Slim & Accessories | No Cost EMI*
-              </h5>
-              <div>
-                <div className="d-flex p-2">
                   <div>
-                    <Link to="/product/5">
-                      <img src={ps51} className="image" id="5" />
-                    </Link>
-                    <p className="p">PS5 Slim digital edition</p>
+                    <div className="fw-semibold">Detail: {ele.detail}</div>
+                    <div className="fw-semibold">Brand: {ele.Brand}</div>
+                    <div className="fw-semibold">Price: {ele.Price}/-</div>
                   </div>
-                  <div className="ps-3">
-                    <Link to="/product/6">
-                      <img src={ps52} className="image" id="6" />
-                    </Link>
-                    <p className="p">PS5 Slim disc edition</p>
+                  <div
+                    className="btn btn-primary"
+                    onClick={() => dispatch(addtocart(ele))}
+                  >
+                    Add to cart
                   </div>
                 </div>
-                <div className="d-flex p-2">
-                  <div>
-                    <Link to="/product/7">
-                      <img src={ps53} className="image" id="7" />
-                    </Link>
-                    <p className="p">PS5 Slim Fortnite digital edition</p>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="row row-cols-4 g-4">
+            <div>
+              <div className="border bg-light p-3" style={{ height: "430px" }}>
+                <h5 className="fw-bold px-2">
+                  Appliances for your home | Up to 55% off
+                </h5>
+                <div>
+                  <div className="d-flex p-2">
+                    <div>
+                      <Link to="/product/1">
+                        <img src={ac} className="image" id="1" />
+                      </Link>
+                      <p className="p">Air conditioners</p>
+                    </div>
+                    <div className="ps-3">
+                      <Link to="/product/2">
+                        <img src={fridge} className="image" id="2" />
+                      </Link>
+                      <p className="p">Refrigerators</p>
+                    </div>
                   </div>
-                  <div className="ps-3">
-                    <Link to="/product/8">
-                      <img src={ps54} className="image" id="8" />
-                    </Link>
-                    <p className="p">PS5 DualSense Wireless Controller</p>
+                  <div className="d-flex p-2">
+                    <div>
+                      <Link to="/product/3">
+                        <img src={oven} className="image" id="3" />
+                      </Link>
+                      <p className="p">Microwaves</p>
+                    </div>
+                    <div className="ps-3">
+                      <Link to="/product/4">
+                        <img src={washing} className="image" id="4" />
+                      </Link>
+                      <p className="p">Washing Machines</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div>
-            <div className="border bg-light p-3" style={{ height: "430px" }}>
-              <h5 className="fw-bold px-2">Revamp your home in style</h5>
-              <div>
-                <div className="d-flex p-2">
-                  <div>
-                    <Link to="/product/9">
-                      <img src={cushion} className="image" id="9" />
-                    </Link>
-                    <p className="p">
-                      Cushion covers,
-                      <br />
-                      bedsheets & more
-                    </p>
+            <div>
+              <div className="border bg-light p-3" style={{ height: "430px" }}>
+                <h5 className="fw-bold px-2">
+                  PlayStation 5 Slim & Accessories | No Cost EMI*
+                </h5>
+                <div>
+                  <div className="d-flex p-2">
+                    <div>
+                      <Link to="/product/5">
+                        <img src={ps51} className="image" id="5" />
+                      </Link>
+                      <p className="p">PS5 Slim digital edition</p>
+                    </div>
+                    <div className="ps-3">
+                      <Link to="/product/6">
+                        <img src={ps52} className="image" id="6" />
+                      </Link>
+                      <p className="p">PS5 Slim disc edition</p>
+                    </div>
                   </div>
-                  <div className="ps-3">
-                    <Link to="/product/10">
-                      <img src={figurine} className="image" id="10" />
-                    </Link>
-                    <p className="p">Figurines, vases & more</p>
-                  </div>
-                </div>
-                <div className="d-flex p-2">
-                  <div>
-                    <Link to="/product/11">
-                      <img src={homeStorage} className="image" id="11" />
-                    </Link>
-                    <p className="p">Home storage</p>
-                  </div>
-                  <div className="ps-3">
-                    <Link to="/product/12">
-                      <img src={light} className="image" id="12" />
-                    </Link>
-                    <p className="p">Lighting solutions</p>
+                  <div className="d-flex p-2">
+                    <div>
+                      <Link to="/product/7">
+                        <img src={ps53} className="image" id="7" />
+                      </Link>
+                      <p className="p">PS5 Slim Fortnite digital edition</p>
+                    </div>
+                    <div className="ps-3">
+                      <Link to="/product/8">
+                        <img src={ps54} className="image" id="8" />
+                      </Link>
+                      <p className="p">PS5 DualSense Wireless Controller</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div>
-            <div className="border bg-light p-3" style={{ height: "430px" }}>
-              <h5 className="fw-bold px-2">
-                Automotive essentials | Up to 60% off
-              </h5>
-              <div>
-                <div className="d-flex p-2">
-                  <div>
-                    <Link to="/product/13">
-                      <img src={cleaning} className="image" id="13" />
-                    </Link>
-                    <p className="p">Cleaning accessories</p>
+            <div>
+              <div className="border bg-light p-3" style={{ height: "430px" }}>
+                <h5 className="fw-bold px-2">Revamp your home in style</h5>
+                <div>
+                  <div className="d-flex p-2">
+                    <div>
+                      <Link to="/product/9">
+                        <img src={cushion} className="image" id="9" />
+                      </Link>
+                      <p className="p">
+                        Cushion covers,
+                        <br />
+                        bedsheets & more
+                      </p>
+                    </div>
+                    <div className="ps-3">
+                      <Link to="/product/10">
+                        <img src={figurine} className="image" id="10" />
+                      </Link>
+                      <p className="p">Figurines, vases & more</p>
+                    </div>
                   </div>
-                  <div className="ps-3">
-                    <Link to="/product/14">
-                      <img src={tyre} className="image" id="14" />
-                    </Link>
-                    <p className="p">Tyre & rim care</p>
+                  <div className="d-flex p-2">
+                    <div>
+                      <Link to="/product/11">
+                        <img src={homeStorage} className="image" id="11" />
+                      </Link>
+                      <p className="p">Home storage</p>
+                    </div>
+                    <div className="ps-3">
+                      <Link to="/product/12">
+                        <img src={light} className="image" id="12" />
+                      </Link>
+                      <p className="p">Lighting solutions</p>
+                    </div>
                   </div>
                 </div>
-                <div className="d-flex p-2">
-                  <div>
-                    <Link to="/product/15">
-                      <img src={helmet} className="image" id="15" />
-                    </Link>
-                    <p className="p">Helmets</p>
+              </div>
+            </div>
+
+            <div>
+              <div className="border bg-light p-3" style={{ height: "430px" }}>
+                <h5 className="fw-bold px-2">
+                  Automotive essentials | Up to 60% off
+                </h5>
+                <div>
+                  <div className="d-flex p-2">
+                    <div>
+                      <Link to="/product/13">
+                        <img src={cleaning} className="image" id="13" />
+                      </Link>
+                      <p className="p">Cleaning accessories</p>
+                    </div>
+                    <div className="ps-3">
+                      <Link to="/product/14">
+                        <img src={tyre} className="image" id="14" />
+                      </Link>
+                      <p className="p">Tyre & rim care</p>
+                    </div>
                   </div>
-                  <div className="ps-3">
-                    <Link to="/product/16">
-                      <img src={vaccum} className="image" id="16" />
-                    </Link>
-                    <p className="p">Vaccum cleaner</p>
+                  <div className="d-flex p-2">
+                    <div>
+                      <Link to="/product/15">
+                        <img src={helmet} className="image" id="15" />
+                      </Link>
+                      <p className="p">Helmets</p>
+                    </div>
+                    <div className="ps-3">
+                      <Link to="/product/16">
+                        <img src={vaccum} className="image" id="16" />
+                      </Link>
+                      <p className="p">Vaccum cleaner</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
+
         {/* Promtional Banner */}
 
         <div className="mt-3 bg-white p-3" style={{ height: "300px" }}>

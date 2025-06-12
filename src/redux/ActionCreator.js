@@ -6,3 +6,6 @@ export const addtocart = (product) => {
 export const removetocart = (id) => {
   return { type: ACTION_TYPE.REMOVE_TO_CART, payload: id };
 };
+export const searchinput = (text) => {
+  return { type: ACTION_TYPE.Search_Input, payload: text };
+};
