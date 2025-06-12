@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import "../index.css";
 import image1 from "../images/Amazon-Logo-White.png";
 import flag from "../images/india-flag.png";
@@ -11,10 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { searchinput } from "../redux/ActionCreator";
 const Navbar = () => {
   const dispatch = useDispatch();
-  // const inputData = useSelector((state) => state);
-  // console.log(inputData);
   const quantity = useSelector((state) => state);
-
   const [focus, setFocus] = useState("false");
   const [focus1, setFocus1] = useState("false");
   const [val, setVal] = useState("EN");

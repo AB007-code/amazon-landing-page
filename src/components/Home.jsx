@@ -137,10 +137,7 @@ const Home = () => {
                   className="border bg-light p-3 d-flex flex-column justify-content-around"
                   style={{ height: "430px" }}
                 >
-                  <div
-                    className="border"
-                    style={{ height: "200px", width: "100%" }}
-                  >
+                  <div style={{ height: "200px", width: "100%" }}>
                     <img
                       src={ele.image}
                       className="h-100 w-100 object-fit-cover"
@@ -148,7 +145,9 @@ const Home = () => {
                   </div>
 
                   <div>
-                    <div className="fw-semibold">Detail: {ele.detail}</div>
+                    <div className="fw-semibold" style={{ fontSize: "0.95em" }}>
+                      Detail: {ele.detail}
+                    </div>
                     <div className="fw-semibold">Brand: {ele.Brand}</div>
                     <div className="fw-semibold">Price: {ele.Price}/-</div>
                   </div>
