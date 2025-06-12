@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../index.css";
 import { useParams } from "react-router-dom";
 import data1 from "../MOCK_Data.json";
 import Footer from "./Footer";
+import { useDispatch } from "react-redux";
+import { addtocart } from "../redux/ActionCreator";
+
 const ProductDetail = () => {
   const { id } = useParams();
-
+  const dispatch = useDispatch();
   let filterData;
   data1.forEach((ele) => {
     let id1 = ele[1]["data"];
@@ -55,7 +58,12 @@ const ProductDetail = () => {
           </div>
 
           <div className="p-3">
-            <div className="btn btn-primary me-3">Add to Cart</div>
+            <div
+              className="btn btn-primary me-3"
+              onClick={() => dispatch(addtocart(filterData))}
+            >
+              Add to Cart
+            </div>
             <div className="btn btn-danger">Remove to Cart</div>
           </div>
 

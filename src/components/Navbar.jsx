@@ -7,11 +7,18 @@ import { CiSearch } from "react-icons/ci";
 import { FaCaretDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FaCartArrowDown } from "react-icons/fa";
+import { useSelector } from "react-redux";
 const Navbar = () => {
+  const quantity = useSelector((state) => state);
   const [focus, setFocus] = useState("false");
   const [focus1, setFocus1] = useState("false");
   const [val, setVal] = useState("EN");
-
+  // const [quant,setQunant] = useState(0) // dont use when item quantity is increased or decrease from other components
+  let dataArr = quantity.Product_data.cartData;
+  let total = dataArr.reduce((acc, ele) => {
+    return acc + ele.quan;
+  }, 0);
+  console.log(total);
   // for handing the focus
   const inputHandel = () => {
     setFocus1(true);
@@ -28,7 +35,10 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="nav-head d-flex justify-content-around">
+      <div
+        className="nav-head d-flex justify-content-around position-sticky top-0"
+        style={{ zIndex: "1000" }}
+      >
         <div>
           <Link
             to="/home"
@@ -327,10 +337,28 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="text-white d-flex flex-wrap align-content-center">
+        <Link
+          className="text-white d-flex flex-wrap align-content-center"
+          style={{ textDecoration: "none" }}
+          to="/cart"
+        >
           <FaCartArrowDown className="fs-2" />
           <span className="d-flex flex-column justify-content-end">Cart</span>
-        </div>
+          <div
+            className="position-relative  d-flex flex-wrap align-content-center justify-content-center text-primary"
+            style={{
+              top: "-20%",
+              left: "-35%",
+              fontSize: "1em",
+              height: "25px",
+              width: "25px",
+              textAlign: "center",
+              borderRadius: "50%",
+            }}
+          >
+            {total}
+          </div>
+        </Link>
       </div>
     </>
   );
