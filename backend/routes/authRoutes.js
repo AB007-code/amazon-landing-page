@@ -5,8 +5,10 @@ const {
   signin,
   getProfile,
   setProduct,
+  getProducts,
 } = require("../controllers/authController");
 const { protect } = require("../middleware/authMiddleware");
+// const { getProducts } = require("../controllers/authController");
 
 const router = express.Router();
 
@@ -45,6 +47,8 @@ router.post(
 
 router.post("/allProducts", setProduct);
 // @route   GET /api/profile
+
+router.get("/getProducts", getProducts);
 router.get("/profile", protect, getProfile);
 
 module.exports = router;

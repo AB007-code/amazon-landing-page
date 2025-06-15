@@ -2,6 +2,7 @@ const User = require("../model/User");
 const jwt = require("jsonwebtoken");
 const Product = require("../model/Product");
 const rawData = require("../data/products.json");
+const getProduct = require("../model/Product");
 const generateToken = (user) => {
   return jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
     expiresIn: "1h",
@@ -76,5 +77,13 @@ exports.setProduct = async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Error uploading data", error });
+  }
+};
+exports.getProducts = async (req, res) => {
+  try {
+    const product = await getProduct.find();
+    res.json(product);
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch data" });
   }
 };

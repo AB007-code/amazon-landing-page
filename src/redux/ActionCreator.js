@@ -9,3 +9,6 @@ export const removetocart = (id) => {
 export const searchinput = (text) => {
   return { type: ACTION_TYPE.Search_Input, payload: text };
 };
+export const fetchData1 = (data) => {
+  return { type: ACTION_TYPE.Fetch_Data, payload: data };
+};

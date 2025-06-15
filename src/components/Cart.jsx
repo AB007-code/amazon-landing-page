@@ -2,7 +2,8 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addtocart, removetocart } from "../redux/ActionCreator";
 import Footer from "./Footer";
-
+import { Link } from "react-router-dom";
+import "../index.css";
 const Cart = () => {
   const cartdata = useSelector((state) => state);
   let dataArr = cartdata.Product_data.cartData;
@@ -15,7 +16,7 @@ const Cart = () => {
     }
     return acc + ele.Price * +ele.quan;
   }, 0);
-
+  const base = "/product/";
   return (
     <>
       {dataArr.length ? (
@@ -30,10 +31,12 @@ const Cart = () => {
                     style={{ height: "100px" }}
                   >
                     <div style={{ height: "80px", width: "25%" }}>
-                      <img
-                        src={ele.image}
-                        className="h-100 w-100 object-fit-contain"
-                      />
+                      <Link to={base + ele.id}>
+                        <img
+                          src={ele.image}
+                          className="h-100 w-100 object-fit-contain imgHover"
+                        />
+                      </Link>
                     </div>
                     <div className="fs-5 fw-semibold d-flex flex-wrap align-content-center  w-25 justify-content-center">
                       {ele.Brand}

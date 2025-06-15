@@ -37,11 +37,22 @@ import promo from "../images/9742750.jpg";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import { useDispatch, useSelector } from "react-redux";
-import data from "../MOCK_Data.json";
-import { addtocart } from "../redux/ActionCreator";
+// import data from "../MOCK_Data.json";
+import { Fetch } from "../utilities/Fetch.js";
+import { addtocart, fetchData1 } from "../redux/ActionCreator";
 const Home = () => {
-  // const [dataArr, setDataArr] = useState([]);
+  const [data1, setDataArr] = useState([]);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const getData = await Fetch();
+      setDataArr(getData);
+      dispatch(fetchData1(getData));
+    };
+    fetchData();
+  }, []);
+
   let clothArr = [
     cloth1,
     cloth2,
@@ -61,16 +72,14 @@ const Home = () => {
   const inputdata = useSelector((state) => state);
   let inputDataArr = inputdata.Product_data.inputData;
   let value = inputDataArr[inputDataArr.length - 1];
-  // useEffect(() => {
+
   let dataArr;
-  data.filter((ele) => {
-    if (ele[0].category == value) {
-      dataArr = ele[1].data;
+  data1.filter((ele) => {
+    if (ele.category == value) {
+      dataArr = ele.data;
     }
   });
-  // }, []);
 
-  console.log(dataArr);
   return (
     <>
       <div

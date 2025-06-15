@@ -1,17 +1,20 @@
-import React from "react";
+// import React, { useEffect, useState } from "react";
 import "../index.css";
 import { useParams } from "react-router-dom";
-import data1 from "../MOCK_Data.json";
 import Footer from "./Footer";
-import { useDispatch } from "react-redux";
-import { addtocart } from "../redux/ActionCreator";
+import { useDispatch, useSelector } from "react-redux";
+import { addtocart, removetocart } from "../redux/ActionCreator";
 
 const ProductDetail = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
+  const totalDataArr = useSelector((state) => state);
+  let dataArr = totalDataArr.Product_data.data;
+  console.log(dataArr);
+
   let filterData;
-  data1.forEach((ele) => {
-    let id1 = ele[1]["data"];
+  dataArr.forEach((ele) => {
+    let id1 = ele["data"];
     for (let i = 0; i < id1.length; i++) {
       if (id1[i].id == id) {
         filterData = id1[i];
@@ -64,7 +67,12 @@ const ProductDetail = () => {
             >
               Add to Cart
             </div>
-            <div className="btn btn-danger">Remove to Cart</div>
+            <div
+              className="btn btn-danger"
+              onClick={() => dispatch(removetocart(filterData.id))}
+            >
+              Remove to Cart
+            </div>
           </div>
 
           <div className="p-3">

@@ -1,6 +1,7 @@
 const initialState = {
   cartData: [],
   inputData: [],
+  data: [],
 };
 export const ReducerFun = (state = initialState, action) => {
   switch (action.type) {
@@ -43,6 +44,9 @@ export const ReducerFun = (state = initialState, action) => {
       return { ...state, cartData: [...arr] };
     case "Search_Input":
       return { ...state, inputData: [...state.inputData, action.payload] };
+
+    case "Fetch_Data":
+      return { ...state, data: action.payload };
     default:
       return state;
   }
