@@ -285,11 +285,11 @@ const Navbar = () => {
                 className="text-center w-50 text-dark rounded-3 p-1"
                 style={{ backgroundColor: "yellow" }}
               >
-                <Link>Sign in</Link>
+                <Link to="/signin">Sign in</Link>
               </h5>
             </div>
             <div className="text-center">
-              New Customer? <Link>Start Here</Link>{" "}
+              New Customer? <Link to="/signup">Start Here</Link>{" "}
             </div>
             <div className="mx-3">
               <hr />

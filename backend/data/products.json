@@ -1,0 +1,263 @@
+[
+  [
+    {
+      "category": "appliances"
+    },
+    {
+      "data": [
+        {
+          "id": 1,
+          "detail": "Daikin 1.5 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, Triple Display, Dew Clean Technology, Coanda Airflow, 2024 Model, MTKL50U, White)",
+          "image": "https://m.media-amazon.com/images/I/61JyEPdw3UL._SL1500_.jpg",
+          "Price": "37,489",
+          "Brand": "DAIKIN",
+          "about": [
+            "split ac with inverter swing compressor and hepta sense: dew clean technology; triple display; pm 2.5 filter to ensure healthy air",
+            "capacity 1.5 ton: suitable for small sized rooms (111 to 150 sq.ft); 572 cfm with an air throw of 16 meters",
+            "3 star: energy efficiency",
+            "warranty: 1 years on product, 5 years on pcb, 10 years on compressor"
+          ],
+          "banner": "https://static.vecteezy.com/system/resources/previews/036/314/557/non_2x/a-set-of-household-appliances-microwave-oven-washing-machine-refrigerator-fan-tv-coffee-laptop-air-conditioner-illustration-vector.jpg"
+        },
+        {
+          "id": 2,
+          "detail": "LG 242 L 3 Star Smart Inverter Frost-Free Double Door Refrigerator (GL-I292RPZX, Shiny Steel, Door Cooling+)",
+          "image": "https://m.media-amazon.com/images/I/61+pdg8CfmL._SL1500_.jpg",
+          "Price": "24,990",
+          "Brand": "LG",
+          "about": [
+            "Frost Free Double Refrigerator Less than 300 L: Auto defrost function to prevent ice-build up",
+            "Capacity 242 ltrs: Suitable for families with 2 to 3 members I freezer capacity: 62 L; fresh food capacity: 180 L",
+            "Energy Rating: 3 Star - energy efficiency",
+            "Manufacturer warranty: 1 year on product; 10 years on compressor *T&C"
+          ],
+          "banner": "https://static.vecteezy.com/system/resources/previews/036/314/557/non_2x/a-set-of-household-appliances-microwave-oven-washing-machine-refrigerator-fan-tv-coffee-laptop-air-conditioner-illustration-vector.jpg"
+        },
+        {
+          "id": 3,
+          "detail": "Samsung 32L, Slim Fry, Convection Microwave Oven with Tandoor and Curd making(MC32A7035CT/TL, Stainless Steel, 10 Yr warranty)",
+          "image": "https://m.media-amazon.com/images/I/71C--BvyqZL._SL1500_.jpg",
+          "Price": "18,390",
+          "Brand": "Samsung",
+          "about": [
+            "Convection Microwave Oven: Suitable for baking, grilling, reheating, defrosting, and cooking",
+            "32L Capacity: Ideal for families with 3-4 members",
+            "Warranty: 1 year on product, 10 years on ceramic enamel cavity",
+            "Features: Multiple programs (Micro, Grill, Combi, Preheat, Power Defrost), Tact + Dial controls, and Child Safety Lock"
+          ],
+          "banner": "https://static.vecteezy.com/system/resources/previews/036/314/557/non_2x/a-set-of-household-appliances-microwave-oven-washing-machine-refrigerator-fan-tv-coffee-laptop-air-conditioner-illustration-vector.jpg"
+        },
+        {
+          "id": 4,
+          "detail": "Samsung 7 kg, Fully-Automatic Top Load Washing Machine with Diamond Drum (WA70A4002GS/TL, Imperial Silver)",
+          "image": "https://m.media-amazon.com/images/I/71a8akl5+LL._SL1500_.jpg",
+          "Price": "15,290",
+          "Brand": "Samsung",
+          "about": [
+            "Fully-automatic top load washing machine with Diamond Drum: Affordable, great wash quality, and easy to use",
+            "Capacity: 7 kg, suitable for 3-4 members; Water Pressure: 0.01-0.78 Mpa; Water Consumption: Refer to BEE label",
+            "Energy Star rating: 3 Star for energy efficiency; Energy Consumption: Refer to BEE label",
+            "Manufacturer Warranty: 2 years comprehensive on product (T&C Apply)"
+          ],
+          "banner": "https://static.vecteezy.com/system/resources/previews/036/314/557/non_2x/a-set-of-household-appliances-microwave-oven-washing-machine-refrigerator-fan-tv-coffee-laptop-air-conditioner-illustration-vector.jpg"
+        }
+      ]
+    }
+  ],
+  [
+    { "category": "game" },
+    {
+      "data": [
+        {
+          "id": 5,
+          "detail": "Sony PlayStation®5 Digital Edition (slim) Console Video Game",
+          "image": "https://m.media-amazon.com/images/I/51afJC92cgL._SL1000_.jpg",
+          "Price": "44,990",
+          "Brand": "Sony",
+          "about": [
+            "Slim Design: Powerful gaming technology in a sleek, compact console",
+            "1TB Ultra-High Speed SSD: Near-instant load times and ample storage for your favorite games",
+            "Ray Tracing & 4K-TV Gaming: Realistic lighting, shadows, and stunning visuals on 4K displays",
+            "Up to 120fps with 120Hz Output & HDR: Smooth, vibrant gameplay with high frame rates and lifelike colors",
+            "Tempest 3D AudioTech: Immersive audio that brings your gaming environment to life",
+            "Haptic Feedback & Adaptive Triggers: Dynamic, tactile feedback and resistance for an immersive controller experience",
+            "Integrated I/O: Custom system integration for innovative game design and rapid data access"
+          ],
+          "banner": "https://png.pngtree.com/thumb_back/fh260/background/20230519/pngtree-black-playstation-4-is-shown-with-the-lights-up-image_2577791.jpg"
+        },
+        {
+          "id": 6,
+          "detail": "Sony PS5® Console Video Game Digital - Fortnite Bundle (Slim)",
+          "image": "https://m.media-amazon.com/images/I/614hWI0OETL._SL1000_.jpg",
+          "Price": "44,990",
+          "Brand": "Sony",
+          "about": [
+            "Slim Design: Sleek and compact console with powerful gaming technology.",
+            "1TB Ultra-High Speed SSD: Near-instant load times and ample storage for your games.",
+            "Ray Tracing & 4K-TV Gaming: Realistic lighting, shadows, and stunning visuals on 4K displays.",
+            "Up to 120fps & HDR: Smooth gameplay with high frame rates and vibrant, lifelike colors.",
+            "Tempest 3D AudioTech: Immersive audio that brings your gaming environment to life.",
+            "Haptic Feedback & Adaptive Triggers: Dynamic sensory feedback and resistance for a realistic controller experience.",
+            "Integrated I/O: Custom system integration for rapid data access and innovative game design."
+          ],
+          "banner": "https://png.pngtree.com/thumb_back/fh260/background/20230519/pngtree-black-playstation-4-is-shown-with-the-lights-up-image_2577791.jpg"
+        },
+        {
+          "id": 7,
+          "detail": "Sony PlayStation5 Gaming Console (Slim)",
+          "image": "https://m.media-amazon.com/images/I/51ljnEaW0pL._SL1000_.jpg",
+          "Price": "54,990",
+          "Brand": "Sony",
+          "about": [
+            "Ultra-high speed SSD enables lightning fast loading times for games.",
+            "Immersive gameplay with haptic feedback, adaptive triggers, and 3D Audio support.",
+            "All-digital console: No disc drive; buy and download games directly from PlayStation Store.",
+            "Powered by custom CPU, GPU, and Integrated I/O for next-gen performance.",
+            "Stunning graphics and new PS5 features; also supports a back catalog of select PS4 games."
+          ],
+          "banner": "https://png.pngtree.com/thumb_back/fh260/background/20230519/pngtree-black-playstation-4-is-shown-with-the-lights-up-image_2577791.jpg"
+        },
+        {
+          "id": 8,
+          "detail": "Sony DualSense Wireless Controller White (PlayStation 5)",
+          "image": "https://m.media-amazon.com/images/I/61Q1Pa4X4-L._SL1500_.jpg",
+          "Price": "6,190",
+          "Brand": "Sony",
+          "about": [
+            "Immersive gameplay with haptic feedback and adaptive triggers for realistic in-game sensations.",
+            "Built-in microphone, 3.5mm headset jack, and dedicated mute button for easy online chat and voice control.",
+            "Comfortable, iconic design with enhanced sticks, integrated motion sensor, and high-fidelity built-in speaker.",
+            "Connect via USB Type-C or Bluetooth to play on PS5, PC, Mac, and mobile devices; stream games using PS Remote Play."
+          ],
+          "banner": "https://png.pngtree.com/thumb_back/fh260/background/20230519/pngtree-black-playstation-4-is-shown-with-the-lights-up-image_2577791.jpg"
+        }
+      ]
+    }
+  ],
+  [
+    { "category": "interior" },
+    {
+      "data": [
+        {
+          "id": 9,
+          "detail": "Story@Home Long Door Curtains 9 Feet Long Set of 1 | Bohemian Cotton Curtains | Birds Printed | Light Filtering Curtain for Living Room | (116 x 275 cm, Lemon Blue) | Perfect for Home Decor",
+          "image": "https://m.media-amazon.com/images/I/818F+o340lL._SL1500_.jpg",
+          "Price": "799",
+          "Brand": "Story@Home",
+          "about": [
+            "Package includes 1 piece of Bohemian Long Door Curtain measuring 116 x 275 cm (46 x 108 inches), made of 100% cotton canvas fabric with a birds pattern in pale yellow & blue.",
+            "Versatile 9 feet long curtains suitable for use as blinds, decorative backdrops, or green screens in living rooms, bedrooms, offices, and more.",
+            "Gently filters natural light to create a warm, cozy ambiance while reducing glare, balancing privacy and brightness effectively.",
+            "Energy-efficient design helps regulate indoor temperature by blocking heat in summer and retaining warmth in winter, also providing soundproofing benefits."
+          ],
+          "banner": "https://www.shutterstock.com/image-photo/cozy-grey-sofa-cushions-pouf-600nw-2436628421.jpg"
+        },
+        {
+          "id": 10,
+          "detail": "TIED RIBBONS Decorative Abstract Thinker Men Statue Set Of 3 Modern Art Showpiece",
+          "image": "https://m.media-amazon.com/images/I/81L3UV8bvyL._SL1500_.jpg",
+          "Price": "599",
+          "Brand": "TIED RIBBONS",
+          "about": [
+            "Set includes 3 thinker statues in different interesting postures, each measuring 13 cm x 6 cm.",
+            "Statues represent contemplation of the past, present, and future, making them a meaningful piece of art for home decor and collection.",
+            "Crafted from high-quality resin, these abstract art pieces are smooth, comfortable to touch, easy to clean, and non-toxic.",
+            "Perfect for decorating living rooms, bedrooms, offices, bookshelves, hotels, and more; complements any decor or festive setting."
+          ],
+          "banner": "https://www.shutterstock.com/image-photo/cozy-grey-sofa-cushions-pouf-600nw-2436628421.jpg"
+        },
+        {
+          "id": 11,
+          "detail": "Boniry Stainless Steel Wall-Mounted Bathroom Shelf – Self-adhesive organizer with 4 towel hooks, space-saving design, elegant black finish",
+          "image": "https://m.media-amazon.com/images/I/81xA2aeEMCL._SL1500_.jpg",
+          "Price": "198",
+          "Brand": "Boniry",
+          "about": [
+            "Enhances bathroom organization by providing ample space for essentials, reducing clutter.",
+            "Easy, drill-free installation with self-adhesive backing—just peel and stick.",
+            "Versatile design fits seamlessly into any bathroom decor as a shelf or stand.",
+            "Space-saving solution that maximizes bathroom storage without taking up extra room."
+          ],
+          "banner": "https://www.shutterstock.com/image-photo/cozy-grey-sofa-cushions-pouf-600nw-2436628421.jpg"
+        },
+        {
+          "id": 12,
+          "detail": "Twixle Golden Metal & Glass 3-Dome Wall Light – Modern wall lamp for living room or bedroom, E27 bulb holder (bulb not included), ideal for home decoration and bedside lighting",
+          "image": "https://m.media-amazon.com/images/I/61WKihCa21L._SL1500_.jpg",
+          "Price": "1,340",
+          "Brand": "Twixle",
+          "about": [
+            "Elegant design with a sleek golden metal frame and clear glass shades for modern sophistication.",
+            "Three individual domed shades offer both focused and widespread illumination.",
+            "Suitable for living rooms, bedrooms, hallways, or any space needing stylish wall lighting.",
+            "Easy installation with all necessary hardware included for hassle-free wall mounting."
+          ],
+          "banner": "https://www.shutterstock.com/image-photo/cozy-grey-sofa-cushions-pouf-600nw-2436628421.jpg"
+        }
+      ]
+    }
+  ],
+  [
+    { "category": "automotive" },
+    {
+      "data": [
+        {
+          "id": 13,
+          "detail": "avex Wonder Wash Car Shampoo (1L) - Luxurious, honey-thick shampoo with peach fragrance, produces rich super suds for an effective car wash",
+          "image": "https://m.media-amazon.com/images/I/71D2RTZ5BBL._SL1500_.jpg",
+          "Price": "460",
+          "Brand": "WaveX",
+          "about": [
+            "Ultra-luxurious car wash shampoo safe for all vehicle surfaces, including waxed, sealed, or ceramic-coated finishes[1][2].",
+            "High-foaming formula ideal for both bucket and foam washing, delivering excellent cleaning power[1][2].",
+            "Super-thick, honey-like consistency means a small amount cleans even large vehicles efficiently[1][2].",
+            "pH neutral and biodegradable formulation is gentle on paint, skin, and the environment[1][2]."
+          ],
+          "banner": "https://i.pinimg.com/736x/37/7d/31/377d31bd3c56b68c0c97b888c6e61e1f.jpg"
+        },
+        {
+          "id": 14,
+          "detail": "AllExtreme EXCTCB1 T-Type Car Tyre Cleaning Brush Scrubber with Antislip Handle Multi-Functional SUV Tire Wheel Rim Hub Washing Cleaner",
+          "image": "https://m.media-amazon.com/images/I/71WuxWlTLNL._SL1500_.jpg",
+          "Price": "198",
+          "Brand": "Allextreme",
+          "about": [
+            "Premium cleaning action with a soft rubber handle and high-density bristles for thorough cleaning of tires, rims, and other car parts[3].",
+            "Soft bristles reach hard-to-clean areas and retain their shape, giving alloys and rims a sparkling, like-new look[3].",
+            "Durable and versatile, suitable for cleaning wheels, tires, and equipment on cars, bikes, and motorcycles[3].",
+            "Easy to use, fits into most nooks and crannies, and designed for long-term use with a comfortable grip[3]."
+          ],
+          "banner": "https://i.pinimg.com/736x/37/7d/31/377d31bd3c56b68c0c97b888c6e61e1f.jpg"
+        },
+        {
+          "id": 15,
+          "detail": "Steelbird SBA-1 R2K Live ISI Certified Full Face Graphic Helmet",
+          "image": "https://m.media-amazon.com/images/I/81LcU4BSqPL._SL1500_.jpg",
+          "Price": "1,499",
+          "Brand": "Steelbird",
+          "about": [
+            "Micro-metric buckle meets European safety standards for secure fastening.",
+            "Multi-layer EPS (thermocol) with high and low density for enhanced safety and integrated air channels.",
+            "Italian design with hygienic interior, multipore breathable padding, and neck protector for extra comfort.",
+            "Anti-scratch coated visor with quick release mechanism for easy and safe visor changes."
+          ],
+          "banner": "https://i.pinimg.com/736x/37/7d/31/377d31bd3c56b68c0c97b888c6e61e1f.jpg"
+        },
+        {
+          "id": 16,
+          "detail": "Bergmann Typhoon Heavy Duty Metal Car Tyre Inflator (Blue)",
+          "image": "https://m.media-amazon.com/images/I/818kmzObgCL._SL1500_.jpg",
+          "Price": "2,109",
+          "Brand": "Bergmann",
+          "about": [
+            "Solid all-metal body ensures durability, reliability, and reduced noise compared to plastic inflators.",
+            "Metal construction radiates heat better, minimizing wear and tear and lowering noise and vibration.",
+            "Powerful 150W pure copper motor enables superfast inflation—0 to 30 psi in around 2 minutes for a 145/70 R12 tyre.",
+            "Built-in high-precision analog pressure gauge with rubber bumper for accurate, battery-free readings and long life."
+          ],
+          "banner": "https://i.pinimg.com/736x/37/7d/31/377d31bd3c56b68c0c97b888c6e61e1f.jpg"
+        }
+      ]
+    }
+  ]
+]
