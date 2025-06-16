@@ -1,9 +1,5 @@
 import Cookies from "js-cookie";
 export const Fetch = async () => {
-  // const [prod, setProd] = useState();
-  // useEffect(() => {
-  //   data();
-  // }, []);
   try {
     console.log(Cookies.get("jwt"));
     const fetchData = await fetch("https://amazon-website-mern.onrender.com", {
