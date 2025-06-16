@@ -8,17 +8,21 @@ import { FaCaretDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FaCartArrowDown } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { searchinput } from "../redux/ActionCreator";
+import { isTrueData, searchinput } from "../redux/ActionCreator";
+import { isAuthnticate } from "../utilities/Auth";
+import Cookies from "js-cookie";
 const Navbar = () => {
   const dispatch = useDispatch();
   const quantity = useSelector((state) => state);
   const [focus, setFocus] = useState("false");
   const [focus1, setFocus1] = useState("false");
   const [val, setVal] = useState("EN");
-
+  // const [changeval, setChangeVal] = useState(isAuthnticate());
   // const [quant,setQunant] = useState(0) // dont use when item quantity is increased or decrease from other components
   let dataArr = quantity.Product_data.cartData;
 
+  let isTrue = quantity.Product_data.isTrue;
+  console.log(isTrue);
   let total = dataArr.reduce((acc, ele) => {
     return acc + ele.quan;
   }, 0);
@@ -36,6 +40,18 @@ const Navbar = () => {
   const optionHandel = (e) => {
     e.target.id ? setVal(e.target.id) : setVal(val);
   };
+  let a = "/signin";
+  if (isAuthnticate()) {
+    a = "/home";
+  } else {
+    a = "/signin";
+  }
+  // let check = isAuthnticate();
+
+  const signOuthandel = () => {
+    Cookies.remove("jwt");
+    dispatch(isTrueData(false));
+  };
 
   return (
     <>
@@ -45,7 +61,7 @@ const Navbar = () => {
       >
         <div>
           <Link
-            to="/home"
+            to={a}
             className="h-100 w-100 d-flex flex-column justify-content-center"
           >
             <img
@@ -285,11 +301,23 @@ const Navbar = () => {
                 className="text-center w-50 text-dark rounded-3 p-1"
                 style={{ backgroundColor: "yellow" }}
               >
-                <Link to="/signin">Sign in</Link>
+                {isTrue ? (
+                  <Link to="/signin" onClick={signOuthandel}>
+                    Sign out
+                  </Link>
+                ) : (
+                  <Link to="/signin">Sign in</Link>
+                )}
               </h5>
             </div>
             <div className="text-center">
-              New Customer? <Link to="/signup">Start Here</Link>{" "}
+              {isTrue ? (
+                ""
+              ) : (
+                <span>
+                  New Customer? <Link to="/signup">Start Here</Link>{" "}
+                </span>
+              )}
             </div>
             <div className="mx-3">
               <hr />

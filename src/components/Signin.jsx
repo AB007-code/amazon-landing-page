@@ -1,6 +1,11 @@
 import React, { useState } from "react";
-
+import Cookies from "js-cookie";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { isTrueData } from "../redux/ActionCreator";
 const Signin = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const styles = {
     container: {
       width: "300px",
@@ -64,7 +69,11 @@ const Signin = () => {
     });
     const data = await res.json();
     if (res.ok) {
-      sessionStorage.setItem("token", data.token);
+      Cookies.set("jwt", data.token, { expires: 7 });
+      Cookies.get("jwt")
+        ? navigate("/home")
+        : Cookies.set("jwt", data.token, { expires: 7 });
+      dispatch(isTrueData(true));
       alert("Logged in!");
     } else {
       alert(data.message || "Login failed");
@@ -101,6 +110,9 @@ const Signin = () => {
           <button type="submit" style={styles.button}>
             Sign In
           </button>
+          <div>
+            New User <Link to="/signup">Sign up</Link> here
+          </div>
         </form>
       </div>
     </>

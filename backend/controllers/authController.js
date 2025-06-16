@@ -9,6 +9,7 @@ const generateToken = (user) => {
   });
 };
 
+// for sign up
 exports.signup = async (req, res) => {
   const { name, email, password } = req.body;
 
@@ -31,6 +32,7 @@ exports.signup = async (req, res) => {
   }
 };
 
+// for sign in
 exports.signin = async (req, res) => {
   const { email, password } = req.body;
 
@@ -53,15 +55,16 @@ exports.signin = async (req, res) => {
   }
 };
 
-exports.getProfile = async (req, res) => {
-  try {
-    const user = await User.findById(req.user.id).select("-password");
-    res.json({ user });
-  } catch (error) {
-    res.status(500).json({ error: "Failed to fetch user profile" });
-  }
-};
+// exports.getProfile = async (req, res) => {
+//   try {
+//     const user = await User.findById(req.user.id).select("-password");
+//     res.json({ user });
+//   } catch (error) {
+//     res.status(500).json({ error: "Failed to fetch user profile" });
+//   }
+// };
 
+// set product in db
 exports.setProduct = async (req, res) => {
   try {
     const inserted = await Promise.all(
@@ -79,6 +82,8 @@ exports.setProduct = async (req, res) => {
     res.status(500).json({ message: "Error uploading data", error });
   }
 };
+
+// get product from database and send it to frontend
 exports.getProducts = async (req, res) => {
   try {
     const product = await getProduct.find();

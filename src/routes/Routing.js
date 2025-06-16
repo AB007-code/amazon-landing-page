@@ -5,16 +5,63 @@ import ProductDetail from "../components/ProductDetail";
 import Cart from "../components/Cart";
 import Signin from "../components/Signin";
 import Signup from "../components/Signup";
-
+import PublicRoute from "./PublicRoute";
+import PrivateRoute from "./PrivateRoute";
+import PageNotFound from "../components/PageNotFound";
+import { isAuthnticate } from "../utilities/Auth";
+import SignupPrivateRoute from "./SignupPrivateRoute";
 const Routing = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/product/:id" element={<ProductDetail />} />
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/signin" element={<Signin />} />
-      <Route path="/signup" element={<Signup />} />
+      <Route
+        path="/"
+        element={
+          <PrivateRoute>
+            <Home />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/home"
+        element={
+          <PrivateRoute>
+            <Home />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/product/:id"
+        element={
+          <PrivateRoute>
+            <ProductDetail />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/cart"
+        element={
+          <PrivateRoute>
+            <Cart />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/signin"
+        element={
+          <PublicRoute>
+            <Signin />
+          </PublicRoute>
+        }
+      />
+      <Route
+        path="signup"
+        element={
+          <SignupPrivateRoute>
+            <Signup />
+          </SignupPrivateRoute>
+        }
+      />
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
 };

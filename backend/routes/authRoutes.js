@@ -3,7 +3,7 @@ const { body, validationResult } = require("express-validator");
 const {
   signup,
   signin,
-  getProfile,
+  // getProfile,
   setProduct,
   getProducts,
 } = require("../controllers/authController");
@@ -45,10 +45,12 @@ router.post(
   signin
 );
 
+// @route   POST /api//allProducts
 router.post("/allProducts", setProduct);
-// @route   GET /api/profile
 
-router.get("/getProducts", getProducts);
-router.get("/profile", protect, getProfile);
+// @route   GET /api/getProducts
+router.get("/getProducts", protect, getProducts);
+
+// router.get("/profile", protect, getProfile);
 
 module.exports = router;

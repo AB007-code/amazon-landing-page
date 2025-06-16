@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -38,7 +39,6 @@ const Signup = () => {
     });
     const data = await res.json();
     if (res.ok) {
-      sessionStorage.setItem("token", data.token);
       alert("Signed up!");
     } else {
       alert(data.message || "Signup failed");
@@ -87,6 +87,9 @@ const Signup = () => {
         <button type="submit" style={styles.button}>
           Sign Up
         </button>
+        <div>
+          Already Registered <Link to="/signin">Sign in</Link> here
+        </div>
       </form>
     </div>
   );

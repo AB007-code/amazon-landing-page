@@ -3,4 +3,5 @@ export const ACTION_TYPE = {
   REMOVE_TO_CART: "Remove_to_cart",
   Search_Input: "Search_Input",
   Fetch_Data: "Fetch_Data",
+  IsTrue_Data: "IsTrue_Data",
 };

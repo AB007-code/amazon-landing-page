@@ -12,3 +12,6 @@ export const searchinput = (text) => {
 export const fetchData1 = (data) => {
   return { type: ACTION_TYPE.Fetch_Data, payload: data };
 };
+export const isTrueData = (data) => {
+  return { type: ACTION_TYPE.IsTrue_Data, payload: data };
+};

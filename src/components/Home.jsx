@@ -37,7 +37,6 @@ import promo from "../images/9742750.jpg";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import { useDispatch, useSelector } from "react-redux";
-// import data from "../MOCK_Data.json";
 import { Fetch } from "../utilities/Fetch.js";
 import { addtocart, fetchData1 } from "../redux/ActionCreator";
 const Home = () => {
@@ -47,6 +46,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       const getData = await Fetch();
+      console.log(getData);
       setDataArr(getData);
       dispatch(fetchData1(getData));
     };

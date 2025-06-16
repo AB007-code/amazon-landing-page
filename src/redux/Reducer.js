@@ -2,6 +2,7 @@ const initialState = {
   cartData: [],
   inputData: [],
   data: [],
+  isTrue: "",
 };
 export const ReducerFun = (state = initialState, action) => {
   switch (action.type) {
@@ -47,6 +48,9 @@ export const ReducerFun = (state = initialState, action) => {
 
     case "Fetch_Data":
       return { ...state, data: action.payload };
+
+    case "IsTrue_Data":
+      return { ...state, isTrue: action.payload };
     default:
       return state;
   }
