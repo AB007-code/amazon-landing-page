@@ -6,7 +6,7 @@ export const Fetch = async () => {
   // }, []);
   try {
     console.log(Cookies.get("jwt"));
-    const fetchData = await fetch("http://localhost:5000/api/getProducts", {
+    const fetchData = await fetch("https://amazon-website-mern.onrender.com", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${Cookies.get("jwt")}`,
