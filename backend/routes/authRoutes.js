@@ -21,6 +21,9 @@ const validate = (checks) => [
     next();
   },
 ];
+router.get("/", (req, res) => {
+  res.send("API is running...");
+});
 
 // @route   POST /api/signup
 router.post(
