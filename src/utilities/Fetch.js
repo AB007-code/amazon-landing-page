@@ -2,12 +2,15 @@ import Cookies from "js-cookie";
 export const Fetch = async () => {
   try {
     console.log(Cookies.get("jwt"));
-    const fetchData = await fetch("https://amazon-website-mern.onrender.com", {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${Cookies.get("jwt")}`,
-      },
-    });
+    const fetchData = await fetch(
+      "https://amazon-landing-page-backend.onrender.com",
+      {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${Cookies.get("jwt")}`,
+        },
+      }
+    );
     const res = await fetchData.json();
     return res;
   } catch (err) {
