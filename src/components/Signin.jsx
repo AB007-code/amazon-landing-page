@@ -62,11 +62,14 @@ const Signin = () => {
     }
 
     // Example sign-in logic
-    const res = await fetch("http://localhost:5000/api/signin", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+    const res = await fetch(
+      "https://amazon-landing-page-backend.onrender.com/signin",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      }
+    );
     const data = await res.json();
     if (res.ok) {
       Cookies.set("jwt", data.token, { expires: 7 });
