@@ -3,7 +3,7 @@ export const Fetch = async () => {
   try {
     console.log(Cookies.get("jwt"));
     const fetchData = await fetch(
-      "https://amazon-landing-page-backend.onrender.com/getProducts",
+      "https://amazon-landing-page-backend.onrender.com",
       {
         method: "GET",
         headers: {

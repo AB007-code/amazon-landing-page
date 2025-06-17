@@ -33,7 +33,7 @@ const Signup = () => {
 
     // Example submission (you would call an API here)
     const res = await fetch(
-      "https://amazon-landing-page-backend.onrender.com/signup",
+      "https://amazon-landing-page-backend.onrender.com",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
