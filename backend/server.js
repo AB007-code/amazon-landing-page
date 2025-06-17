@@ -10,7 +10,7 @@ connectDB();
 const app = express();
 app.use(
   cors({
-    origin: "https://polite-churros-dc2255.netlify.app",
+    origin: "https://startling-salmiakki-be49cd.netlify.app",
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
