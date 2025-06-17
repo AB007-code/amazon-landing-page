@@ -10,7 +10,8 @@ connectDB();
 const app = express();
 app.use(
   cors({
-    origin: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    origin: "https://visionary-naiad-b0f571.netlify.app",
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
