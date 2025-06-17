@@ -63,7 +63,7 @@ const Signin = () => {
 
     // Example sign-in logic
     const res = await fetch(
-      "https://amazon-landing-page-backend.onrender.com",
+      "https://amazon-landing-page-backend.onrender.com/signin",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
